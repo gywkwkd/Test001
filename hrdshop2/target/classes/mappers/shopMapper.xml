@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.mapper.ShopMapper">
+
+<insert id="create">
+insert into member_tbl(MEMBER_ID,member_pw,member_name,join_date)
+VALUES(#{member_id},#{member_pw1},#{member_name},#{member_join_date})
+</insert>
+
+<select id="listAll" resultType="org.study.shop.model.Member">
+select * from member_tbl
+order by join_date desc
+</select>
+
+
+
+
+
+
+</mapper>
